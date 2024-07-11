@@ -30,35 +30,45 @@ int main()
 	int i1{}; // счётчик введеных чисел
 
 	int Xnum[2]{};
-	int Ynum[2]{};
+	int Ynum[4]{};
 
-	for (int i = 0; i < num; i++)
+	//проверка на мусорность массивов
+	/*for (int i = 0; i < num; i++)
 	{
-		std::cout << "Xnum: " << Xnum[i] << "\n";
-		std::cout << "Ynum: " << Ynum[i] << "\n";
-	}
+		std::cout << "xnum: " << xnum[i] << "\n";
+		std::cout << "ynum: " << ynum[i] << "\n";
+	}*/
+
 	while (i1 < num)
 	{	
-		cout << "Enter a variable: "; 
+		cout << "Enter a variable: " << endl;
 		// ввод чисел в массив
 
-		if (i1 == num / 2)
+		if (i1 >= a)
 		{
+			cout << "a = " << a << endl;
+			cout << "i1 = " << i1 << endl;
+			cout << "Enter Ynum: ";
 			cin >> Ynum[i1];
 		}
-		else
+		else 
 		{
+			cout << "a = " << a << endl;
+			cout << "i1 = " << i1 << endl;
+			cout << "Enter Xnum: ";
 			cin >> Xnum[i1];
 		}
 
 		i1++;
-		cout << "Entered: " << i1 << "/" << num << endl;
+		cout << "Entered: " << i1 << "/" << num << endl << endl;
 
 	}
-	for (int i = 0; i < num; i++)
+	for (int i = 0; i < a; i++)
 	{
-		std::cout << "Xnum: " << Xnum[i] << "\n";
-		std::cout << "Ynum: " << Ynum[i] << "\n";
+		cout << "Xnum: " << Xnum[i] << "\n";
 	}
-
+	for (int i = b; i < a + b; i++)
+	{
+		cout << "Ynum: " << Ynum[i] << "\n";
+	}
 }
