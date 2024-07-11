@@ -29,8 +29,8 @@ int main()
 
 	int i1{}; // счётчик введеных чисел
 
-	int Xnum[2]{};
-	int Ynum[4]{};
+	int Xnum[4]{};
+	int Ynum[8]{};
 
 	//проверка на мусорность массивов
 	/*for (int i = 0; i < num; i++)
@@ -46,15 +46,11 @@ int main()
 
 		if (i1 >= a)
 		{
-			cout << "a = " << a << endl;
-			cout << "i1 = " << i1 << endl;
 			cout << "Enter Ynum: ";
 			cin >> Ynum[i1];
 		}
 		else 
 		{
-			cout << "a = " << a << endl;
-			cout << "i1 = " << i1 << endl;
 			cout << "Enter Xnum: ";
 			cin >> Xnum[i1];
 		}
@@ -67,7 +63,7 @@ int main()
 	{
 		cout << "Xnum: " << Xnum[i] << "\n";
 	}
-	for (int i = b; i < a + b; i++)
+	for (int i = b; i < a * b; i++)
 	{
 		cout << "Ynum: " << Ynum[i] << "\n";
 	}
