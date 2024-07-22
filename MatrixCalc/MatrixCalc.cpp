@@ -65,27 +65,62 @@ int main()
 		}
 		cout << endl;
 	}
+	cout << endl;
 
-	cout << endl << "Result matrix: " << endl;
-	const int x{x1}, y{y1};
+	const int x{ x1 }, y{ y1 };
 	int result[x][y]//результирующая сумма
 	{
 		{0,0},
 		{0,0}
 	};
-	
-	//Сумма двух массивов
-	for (int i{}; i < x1; i++)
+
+	char op{};
+	cout << "Choose what you need: \n(+) - sum  \n(-) - difference \n(*) - multiplication \n(/) - quotient\n";
+	cin >> op;
+
+	switch (op)
 	{
-		for (int j{}; j < y1; j++) 
+	case '+': //сумма матриц
+		for (int i{}; i < x1; i++)
 		{
-			result[i][j] = XYnum1[i][j] + XYnum2[i][j];
+			for (int j{}; j < y1; j++)
+			{
+				result[i][j] = XYnum1[i][j] + XYnum2[i][j];
+			}
 		}
+		break;
+	case '-': //разница матриц
+		for (int i{}; i < x1; i++)
+		{
+			for (int j{}; j < y1; j++)
+			{
+				result[i][j] = XYnum1[i][j] - XYnum2[i][j];
+			}
+		}
+		break;
+	case '*': //произведение матриц
+		for (int i{}; i < x1; i++)
+		{
+			for (int j{}; j < y1; j++)
+			{
+				result[i][j] = XYnum1[i][j] * XYnum2[i][j];
+			}
+		}
+		break;
+	case '/': //частное матриц
+		for (int i{}; i < x1; i++)
+		{
+			for (int j{}; j < y1; j++)
+			{
+				result[i][j] = XYnum1[i][j] / XYnum2[i][j];
+			}
+		}
+		break;
+	default: cout << "Incorrect choose" << endl;
 	}
 
-
-
 	//Вывод РЕЗУЛЬТАТИРУЮЩЕГО многомерного массива
+	cout << endl << "Result matrix: " << endl;
 	for (int i = 0; i < x; i++)
 	{
 		for (int j = 0; j < y; j++)
